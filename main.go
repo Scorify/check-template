@@ -8,8 +8,8 @@ import (
 
 // Schema is a custom defined struct that will hold the check configuration
 type Schema struct {
-	Target string `json:"target"` // Make sure to use the json tags to define the key in the config
-	Port   int    `json:"port"`
+	Target string `key:"target"` // Make sure to use the scorify tags to define the key in the config
+	Port   int    `key:"port"`
 
 	// Add any additional fields that you want to pass in as config
 }
