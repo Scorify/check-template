@@ -27,7 +27,5 @@ func Run(ctx context.Context, config string) error {
 
 	// Custom logic to run the check
 
-	fmt.Println("Running check with target:", schema.Target, "and port:", schema.Port)
-
 	return nil
 }
