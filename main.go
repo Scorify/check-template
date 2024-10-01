@@ -1,9 +1,9 @@
-package check_template
+package main
 
 import (
 	"context"
-	"encoding/json"
-	"fmt"
+
+	"github.com/scorify/schema"
 )
 
 // Schema is a custom defined struct that will hold the check configuration
@@ -17,10 +17,10 @@ type Schema struct {
 // Run is the function that will get called to run an instance of a check
 func Run(ctx context.Context, config string) error {
 	// Define a new Schema
-	schema := Schema{}
+	conf := Schema{}
 
 	// Unmarshal the config to the Schema
-	err := json.Unmarshal([]byte(config), &schema)
+	err := schema.Unmarshal([]byte(config), &conf)
 	if err != nil {
 		return err
 	}
